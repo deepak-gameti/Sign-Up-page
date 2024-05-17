@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+:root {
+    --primary-red: hsl(0, 100%, 74%);
+    --primary-green: hsl(154, 59%, 51%);
+    --primary-second-green: hsl(154, 56%, 43%);
+    --neutral-dark-blue: hsl(249, 10%, 26%);
+    --neutral-grayish-blue: hsl(246, 25%, 77%);
+    --accent-blue: hsl(248, 32%, 49%);
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    width: 1440px;
+    height: 800px;
+    background: url(images/bg-intro-desktop.png), conic-gradient(var(--primary-red), var(--primary-red));
+
+    display: flex;
+    align-items: center;
+    padding: 10rem;
+    gap: 4rem;
+}
+
+.text-bx {
+    color: white;
+}
+
+.text-bx>h1 {
+    font-size: 3.5rem;
+    line-height: 3.8rem;
+    margin-bottom: 2rem;
+}
+
+.text-bx>p {
+    font-size: 1.1rem;
+    max-width: 550px;
+}
+
+
+
+.form-bx {
+    color: white;
+}
+
+.form-bx>.offer {
+    background: var(--accent-blue);
+    padding: .8rem;
+    text-align: center;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    box-shadow: 0px 8px 0px 0px rgba(0, 0, 0, 0.288);
+}
+
+.offer>p {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.offer>p>span:only-child {
+    font-weight: 400;
+}
+
+.form-bx>form {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    padding: 3rem;
+    border-radius: 12px;
+    box-shadow: 0px 8px 0px 0px rgba(0, 0, 0, 0.288);
+}
+
+.form-bx>form>input {
+    background: transparent;
+    padding: 1rem 1.8rem;
+    border-radius: 8px;
+    border: 1px solid rgb(179, 179, 179);
+    width: 400px;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.form-bx>form>input::placeholder {
+    font-weight: 600;
+    letter-spacing: .5px;
+}
+
+.form-bx>form>input:focus {
+    outline: 1px solid var(--neutral-grayish-blue);
+}
+
+.form-bx>form>#subBtn {
+    background: var(--primary-green);
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    box-shadow: 0px -5px 0px 0px rgba(0, 0, 0, 0.288)inset;
+    border: none;
+    padding: .8rem;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: .1s linear;
+    margin-bottom: 1rem;
+}
+
+.form-bx>form>#subBtn:hover {
+    background: var(--primary-second-green);
+}
+
+.form-bx>form>#subBtn:active {
+    transform: scale(.96);
+}
+
+.form-bx>form>p {
+    color: var(--neutral-grayish-blue);
+    font-size: 12px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.form-bx>form>p span:only-child {
+    color: var(--primary-red);
+}
+
+@media (max-width: 375px) {
+    .container {
+        background: url(images/bg-intro-mobile.png), conic-gradient(var(--primary-red), var(--primary-red));
+        flex-direction: column;
+        justify-content: center;
+        width: 375px;
+        height: max-content;
+        padding: 1.1rem;
+        gap: 4rem;
+    }
+
+    .text-bx {
+        text-align: center;
+        margin-top: 20rem;
+    }
+
+    .text-bx>h1 {
+        font-size: 2rem;
+        line-height: 2.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .form-bx>form {
+        padding: 1.5rem;
+        justify-content: center;
+    }
+    
+    .form-bx>form>input {
+        padding: 1rem 1.8rem;
+        width: 300px;
+        margin-bottom: 1.5rem;
+    }
+    
+    .form-bx > .offer{
+        margin-bottom: 1.6rem;
+    }
+
+    .form-bx > .offer > p {
+        max-width: 200px;
+        margin: auto;
+    }
+    
+
+}
